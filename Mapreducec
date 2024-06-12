@@ -1,1 +1,9 @@
+import sys
+
+for line in sys.stdin:
+    fields = line.strip().split()
+    if len(fields) > 1:
+        paper_id = fields[0]
+        for cited_paper in fields[1:]:
+            print(f"{cited_paper}\t1")
 
